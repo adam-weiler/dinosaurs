@@ -26,6 +26,8 @@ SELECT * FROM dinos WHERE t_order = 'Saurischia' AND diet = 'Herbivorous;
 
 6. Dinosaur names are hard to remember. Find the shortest dinosaur, and rename it Shortie.
 SELECT name AS Shortie FROM dinos ORDER BY length ASC LIMIT 1;
+<or>
+SELECT name AS Shortie FROM dinos WHERE length = (SELECT MIN(length) FROM dinos);
 
 
 
